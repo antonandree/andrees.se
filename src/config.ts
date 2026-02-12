@@ -1,2 +1,1 @@
-// export const CONTACT_API_URL = "https://sgl1wwveb0.execute-api.eu-north-1.amazonaws.com/contact"; // DEV
-export const CONTACT_API_URL = "https://bxy5zc5tfg.execute-api.eu-north-1.amazonaws.com/contact"; // PROD
+export const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL
