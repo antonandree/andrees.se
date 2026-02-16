@@ -7,7 +7,7 @@ const Index = () => {
     {
       icon: Database,
       title: 'Data Engineering & Integration',
-      description: 'Bygger robusta datapipelines och ETL-processer som skapar värde från era data och integrerar flera datakällor.',
+      description: 'Bygger robusta datapipelines och ETL-processer som skapar värde från era data och integrerar datakällor.',
     },
     {
       icon: Workflow,
