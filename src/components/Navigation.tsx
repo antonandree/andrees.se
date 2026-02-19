@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import logo from "@/assets/header_logo.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -10,6 +11,7 @@ const Navigation = () => {
     { to: '/', label: 'Hem' },
     { to: '/resume', label: 'CV' },
     { to: '/contact', label: 'Kontakt' },
+    { to: '/blogg', label: 'Blogg' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -19,12 +21,11 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center border border-primary/30 group-hover:glow-primary transition-all duration-300">
-              <span className="text-primary font-bold text-lg">A</span>
-            </div>
-            <span className="text-foreground font-semibold hidden sm:block">
-              Andrées Ingenjörsbyrå
-            </span>
+            <img
+              src={logo}
+              alt="Andrées Ingenjörsbyrå"
+              className="h-12 md:h-14 w-auto brightness-110"
+            />
           </Link>
 
           {/* Desktop Navigation */}

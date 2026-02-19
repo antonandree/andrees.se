@@ -1,35 +1,35 @@
-import { Database, Cloud, GitBranch, BarChart3, Workflow, Download } from 'lucide-react';
-import ServiceCard from '@/components/ServiceCard';
-import { Link } from 'react-router-dom';
+import { Sprout, Users, Globe, Bot } from "lucide-react";
+import ServiceCard from "@/components/ServiceCard";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const services = [
     {
-      icon: Database,
-      title: 'Data Engineering & Integration',
-      description: 'Bygger robusta datapipelines och ETL-processer som skapar värde från era data och integrerar datakällor.',
+      icon: Sprout,
+      title: "Bygga datadrivna system från grunden",
+      description:
+        "Jag hjälper er ta steget mot en datadriven verksamhet – från första integrationerna till en stabil och automatiserad dataplattform som fungerar i produktion.",
     },
     {
-      icon: Workflow,
-      title: 'Data Orchestration',
-      description: 'Automatiserar och optimerar arbetsflöden med moderna verktyg som Airflow, vilket säkerställer pålitliga och repeterbara dataflöden.',
+      icon: Users,
+      title: "Förstärka ert datateam",
+      description:
+        "Arbetar som en integrerad del av ert team med både teknisk leverans och struktur – från arkitektur och pipelines till datamodellering och automatisering.",
     },
     {
-      icon: BarChart3,
-      title: 'Analytics Platforms',
-      description: 'Skapar analytiska plattformar som möjliggör datadrivna beslut och insikter för verksamheten.',
+      icon: Globe,
+      title: "Web scraping & datainsamling",
+      description:
+        "Design och utveckling av stabila lösningar för att samla in, strukturera och integrera extern data i era befintliga dataflöden.",
     },
     {
-      icon: Download,
-      title: 'Web Scraping',
-      description: 'Automatiserad datainsamling från webbkällor med effektiva, skalbara och säkra lösningar.',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Design och implementation av skalbara och kostnadseffektiva molnlösningar, främst i AWS.',
+      icon: Bot,
+      title: "AI proof-of-concepts",
+      description:
+        "Hjälper er utforska AI-möjligheter genom praktiska proof-of-concepts baserade på er egen data – utan att bygga onödig komplexitet.",
     },
   ];
+
 
   return (
     <div className="min-h-screen">
@@ -38,30 +38,33 @@ const Index = () => {
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 opacity-0 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-sm text-primary font-medium">Tillgänglig för uppdrag</span>
+            <span className="text-sm text-primary font-medium">
+              Tillgänglig för uppdrag
+            </span>
           </div>
 
           <h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 opacity-0 animate-fade-in"
-            style={{ animationDelay: '100ms' }}
+            style={{ animationDelay: "100ms" }}
           >
             Data Engineering
             <br />
-            <span className="text-gradient">som driver tillväxt</span>
+            <span className="text-gradient">som gör er datadrivna</span>
           </h1>
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 opacity-0 animate-fade-in"
-            style={{ animationDelay: '200ms' }}
+            style={{ animationDelay: "200ms" }}
           >
-            Data engineer med passion för att bygga skalbara
-            datalösningar som transformerar rådata till affärsvärde.
-            Med 5 års erfarenhet och ett flertal uppdrag i ryggen vet  jag vad som funkar!
+            Hands-on data engineer som hjälper er hela vägen – från första
+            stegen till en robust och automatiserad dataplattform. Fokus på
+            kvalitet, driftsäkerhet och struktur så att data faktiskt går att
+            lita på och använda i beslut.
           </p>
 
           <div
             className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in"
-            style={{ animationDelay: '300ms' }}
+            style={{ animationDelay: "300ms" }}
           >
             <Link
               to="/contact"
@@ -86,12 +89,13 @@ const Index = () => {
             Hur jag kan hjälpa er
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Med bred erfarenhet inom modern datainfrastruktur hjälper jag företag
-            att bygga framtidssäkra datalösningar.
+            Jag hjälper organisationer bli datadrivna på riktigt – genom att
+            bygga en stabil grund, få dataflöden att fungera i produktion och
+            göra data användbar i vardagen.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <ServiceCard
               key={service.title}
@@ -111,8 +115,8 @@ const Index = () => {
             Intresserad?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Låt oss diskutera hur jag kan hjälpa er organisation att
-            maximera värdet av era data.
+            Låt oss prata igenom nuläge, målbild och första steg. Jag kan bidra
+            med både riktning och hands-on leverans – utan onödig komplexitet.
           </p>
           <Link
             to="/contact"
@@ -122,23 +126,6 @@ const Index = () => {
           </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="container mx-auto px-6 py-8 border-t border-border/30">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">
-            © 2024 Andrées Ingenjörsbyrå. Alla rättigheter förbehållna.
-          </p>
-          <div className="flex items-center gap-6">
-            <Link to="/resume" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-              CV
-            </Link>
-            <Link to="/contact" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-              Kontakt
-            </Link>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
