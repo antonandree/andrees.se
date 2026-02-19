@@ -12,7 +12,8 @@ const posts: Record<
     tags: string[];
     component: React.ComponentType;
   }
-> = {
+> = {};
+/*
   "data-warehouses-och-deras-begransningar": {
     title: "Data warehouses och deras begränsningar",
     date: "2024-12-01",
@@ -28,6 +29,7 @@ const posts: Record<
     component: BlogPost2,
   },
 };
+*/
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();

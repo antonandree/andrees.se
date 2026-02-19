@@ -1,46 +1,35 @@
-import { Database, Cloud, BarChart3, Workflow, Download, ShieldCheck } from 'lucide-react';
-import ServiceCard from '@/components/ServiceCard';
-import { Link } from 'react-router-dom';
+import { Sprout, Users, Globe, Bot } from "lucide-react";
+import ServiceCard from "@/components/ServiceCard";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const services = [
     {
-      icon: Database,
-      title: 'Modern Data Platform Engineering',
+      icon: Sprout,
+      title: "Bygga datadrivna system från grunden",
       description:
-        'Design och implementation av moderna dataplattformar i AWS och Snowflake – från rådata till analysklara modeller med fokus på skalbarhet och driftsäkerhet.',
+        "Jag hjälper er ta steget mot en datadriven verksamhet – från första integrationerna till en stabil och automatiserad dataplattform som fungerar i produktion.",
     },
     {
-      icon: Workflow,
-      title: 'Pipelines, Integration & Orchestration',
+      icon: Users,
+      title: "Förstärka ert datateam",
       description:
-        'Robusta datapipelines och integrationer med tydlig struktur, testbarhet och uppföljning – ofta med dbt och Airflow för pålitliga och repeterbara flöden.',
+        "Arbetar som en integrerad del av ert team med både teknisk leverans och struktur – från arkitektur och pipelines till datamodellering och automatisering.",
     },
     {
-      icon: ShieldCheck,
-      title: 'Automation, CI/CD & IaC',
+      icon: Globe,
+      title: "Web scraping & datainsamling",
       description:
-        'Inför CI/CD och Infrastructure as Code (Terraform) för att skapa förutsägbara releaser, mindre handpåläggning och lösningar som går att förvalta över tid.',
+        "Design och utveckling av stabila lösningar för att samla in, strukturera och integrera extern data i era befintliga dataflöden.",
     },
     {
-      icon: BarChart3,
-      title: 'Analytics Enablement',
+      icon: Bot,
+      title: "AI proof-of-concepts",
       description:
-        'Bygger analysvänliga datamodeller och datamarts i nära samarbete med verksamhet och analytiker – så att data faktiskt blir användbar i beslutsfattandet.',
-    },
-    {
-      icon: Download,
-      title: 'Web Scraping & Data Collection',
-      description:
-        'Automatiserad datainsamling från webbkällor – scraping, rensning och strukturering samt integration in i pipelines för att göra extern data till en tillgång.',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture (AWS)',
-      description:
-        'Skalbar och kostnadseffektiv arkitektur i AWS, med rätt nivå av säkerhet, observability och governance – anpassat efter behov och mognadsgrad.',
+        "Hjälper er utforska AI-möjligheter genom praktiska proof-of-concepts baserade på er egen data – utan att bygga onödig komplexitet.",
     },
   ];
+
 
   return (
     <div className="min-h-screen">
@@ -49,30 +38,33 @@ const Index = () => {
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 opacity-0 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-sm text-primary font-medium">Tillgänglig för uppdrag</span>
+            <span className="text-sm text-primary font-medium">
+              Tillgänglig för uppdrag
+            </span>
           </div>
 
           <h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 opacity-0 animate-fade-in"
-            style={{ animationDelay: '100ms' }}
+            style={{ animationDelay: "100ms" }}
           >
             Data Engineering
             <br />
-            <span className="text-gradient">som håller i produktion</span>
+            <span className="text-gradient">som gör er datadrivna</span>
           </h1>
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 opacity-0 animate-fade-in"
-            style={{ animationDelay: '200ms' }}
+            style={{ animationDelay: "200ms" }}
           >
-            Hands-on data engineer som bygger och moderniserar molnbaserade dataplattformar – från integration och
-            pipelines till analysklara modeller. Fokus: driftsäkerhet, struktur och automatisering (CI/CD & IaC) så att
-            lösningen går att förvalta över tid.
+            Hands-on data engineer som hjälper er hela vägen – från första
+            stegen till en robust och automatiserad dataplattform. Fokus på
+            kvalitet, driftsäkerhet och struktur så att data faktiskt går att
+            lita på och använda i beslut.
           </p>
 
           <div
             className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in"
-            style={{ animationDelay: '300ms' }}
+            style={{ animationDelay: "300ms" }}
           >
             <Link
               to="/contact"
@@ -93,14 +85,17 @@ const Index = () => {
       {/* Services Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Hur jag kan hjälpa er</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Hur jag kan hjälpa er
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Jag hjälper team att gå från “det funkar ibland” till en stabil dataplattform som levererar. Oavsett om ni
-            ska bygga nytt, migrera eller strukturera upp ett befintligt landskap.
+            Jag hjälper organisationer bli datadrivna på riktigt – genom att
+            bygga en stabil grund, få dataflöden att fungera i produktion och
+            göra data användbar i vardagen.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <ServiceCard
               key={service.title}
@@ -116,10 +111,12 @@ const Index = () => {
       {/* CTA Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Intresserad?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Intresserad?
+          </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Låt oss prata igenom nuläge, målbild och nästa steg – så tar vi fram en enkel plan för att skapa värde av era
-            data utan onödig komplexitet.
+            Låt oss prata igenom nuläge, målbild och första steg. Jag kan bidra
+            med både riktning och hands-on leverans – utan onödig komplexitet.
           </p>
           <Link
             to="/contact"

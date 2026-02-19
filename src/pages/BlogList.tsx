@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
-const blogPosts = [
+const blogPosts = [];
+/*
   {
     slug: "data-warehouses-och-deras-begransningar",
     title: "Data warehouses och deras begränsningar",
@@ -20,7 +21,7 @@ const blogPosts = [
     readTime: "12 min",
     tags: ["CSV", "JSON", "Avro", "Parquet", "Filformat"],
   },
-];
+];*/
 
 const BlogList = () => {
   return (
