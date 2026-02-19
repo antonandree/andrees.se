@@ -28,15 +28,15 @@ const AnimatedBackground = () => {
       connections: number[];
     }> = [];
 
-    const particleCount = 80;
-    const connectionDistance = 150;
+    const particleCount = 45;
+    const connectionDistance = 120; 
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
         size: Math.random() * 2 + 1,
         opacity: Math.random() * 0.5 + 0.2,
         connections: [],
@@ -44,7 +44,7 @@ const AnimatedBackground = () => {
     }
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(11, 15, 25, 0.1)';
+      ctx.fillStyle = 'rgba(11, 15, 25, 0.25)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -71,12 +71,12 @@ const AnimatedBackground = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < connectionDistance) {
-            const opacity = (1 - distance / connectionDistance) * 0.3;
+            const opacity = (1 - distance / connectionDistance) * 0.12;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(other.x, other.y);
             ctx.strokeStyle = `rgba(14, 165, 233, ${opacity})`;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 0.85;
             ctx.stroke();
           }
         });

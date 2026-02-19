@@ -6,8 +6,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'antonandree@gmail.com',
-      href: 'mailto:antonandree@gmail.com',
+      value: 'anton@andrees.com',
+      href: 'mailto:anton@andrees.com',
     },
     {
       icon: MapPin,
@@ -84,7 +84,7 @@ const Contact = () => {
             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-card">
               <span className="w-3 h-3 rounded-full bg-accent animate-pulse" />
               <span className="text-foreground font-medium">
-                Tillgänglig för nya uppdrag från mars 2025
+                Tillgänglig för nya uppdrag från mars 2026
               </span>
             </div>
           </div>

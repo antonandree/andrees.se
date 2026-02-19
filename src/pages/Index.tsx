@@ -1,4 +1,4 @@
-import { Database, Cloud, GitBranch, BarChart3, Workflow, Download } from 'lucide-react';
+import { Database, Cloud, BarChart3, Workflow, Download, ShieldCheck } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import { Link } from 'react-router-dom';
 
@@ -6,28 +6,39 @@ const Index = () => {
   const services = [
     {
       icon: Database,
-      title: 'Data Engineering & Integration',
-      description: 'Bygger robusta datapipelines och ETL-processer som skapar värde från era data och integrerar datakällor.',
+      title: 'Modern Data Platform Engineering',
+      description:
+        'Design och implementation av moderna dataplattformar i AWS och Snowflake – från rådata till analysklara modeller med fokus på skalbarhet och driftsäkerhet.',
     },
     {
       icon: Workflow,
-      title: 'Data Orchestration',
-      description: 'Automatiserar och optimerar arbetsflöden med moderna verktyg som Airflow, vilket säkerställer pålitliga och repeterbara dataflöden.',
+      title: 'Pipelines, Integration & Orchestration',
+      description:
+        'Robusta datapipelines och integrationer med tydlig struktur, testbarhet och uppföljning – ofta med dbt och Airflow för pålitliga och repeterbara flöden.',
+    },
+    {
+      icon: ShieldCheck,
+      title: 'Automation, CI/CD & IaC',
+      description:
+        'Inför CI/CD och Infrastructure as Code (Terraform) för att skapa förutsägbara releaser, mindre handpåläggning och lösningar som går att förvalta över tid.',
     },
     {
       icon: BarChart3,
-      title: 'Analytics Platforms',
-      description: 'Skapar analytiska plattformar som möjliggör datadrivna beslut och insikter för verksamheten.',
+      title: 'Analytics Enablement',
+      description:
+        'Bygger analysvänliga datamodeller och datamarts i nära samarbete med verksamhet och analytiker – så att data faktiskt blir användbar i beslutsfattandet.',
     },
     {
       icon: Download,
-      title: 'Web Scraping',
-      description: 'Automatiserad datainsamling från webbkällor med effektiva, skalbara och säkra lösningar.',
+      title: 'Web Scraping & Data Collection',
+      description:
+        'Automatiserad datainsamling från webbkällor – scraping, rensning och strukturering samt integration in i pipelines för att göra extern data till en tillgång.',
     },
     {
       icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Design och implementation av skalbara och kostnadseffektiva molnlösningar, främst i AWS.',
+      title: 'Cloud Architecture (AWS)',
+      description:
+        'Skalbar och kostnadseffektiv arkitektur i AWS, med rätt nivå av säkerhet, observability och governance – anpassat efter behov och mognadsgrad.',
     },
   ];
 
@@ -47,16 +58,16 @@ const Index = () => {
           >
             Data Engineering
             <br />
-            <span className="text-gradient">som driver tillväxt</span>
+            <span className="text-gradient">som håller i produktion</span>
           </h1>
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 opacity-0 animate-fade-in"
             style={{ animationDelay: '200ms' }}
           >
-            Data engineer med passion för att bygga skalbara
-            datalösningar som transformerar rådata till affärsvärde.
-            Med 5 års erfarenhet och ett flertal uppdrag i ryggen vet  jag vad som funkar!
+            Hands-on data engineer som bygger och moderniserar molnbaserade dataplattformar – från integration och
+            pipelines till analysklara modeller. Fokus: driftsäkerhet, struktur och automatisering (CI/CD & IaC) så att
+            lösningen går att förvalta över tid.
           </p>
 
           <div
@@ -82,12 +93,10 @@ const Index = () => {
       {/* Services Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Hur jag kan hjälpa er
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Hur jag kan hjälpa er</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Med bred erfarenhet inom modern datainfrastruktur hjälper jag företag
-            att bygga framtidssäkra datalösningar.
+            Jag hjälper team att gå från “det funkar ibland” till en stabil dataplattform som levererar. Oavsett om ni
+            ska bygga nytt, migrera eller strukturera upp ett befintligt landskap.
           </p>
         </div>
 
@@ -107,12 +116,10 @@ const Index = () => {
       {/* CTA Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Intresserad?
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Intresserad?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Låt oss diskutera hur jag kan hjälpa er organisation att
-            maximera värdet av era data.
+            Låt oss prata igenom nuläge, målbild och nästa steg – så tar vi fram en enkel plan för att skapa värde av era
+            data utan onödig komplexitet.
           </p>
           <Link
             to="/contact"
@@ -126,15 +133,16 @@ const Index = () => {
       {/* Footer */}
       <footer className="container mx-auto px-6 py-8 border-t border-border/30">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">
-            © 2024 Andrées Ingenjörsbyrå. Alla rättigheter förbehållna.
-          </p>
+          <p className="text-muted-foreground text-sm">© 2024 Andrées Ingenjörsbyrå. Alla rättigheter förbehållna.</p>
           <div className="flex items-center gap-6">
             <Link to="/resume" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
               CV
             </Link>
             <Link to="/contact" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
               Kontakt
+            </Link>
+            <Link to="/blogg" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+              Blogg
             </Link>
           </div>
         </div>
