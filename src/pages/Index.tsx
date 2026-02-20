@@ -107,25 +107,6 @@ const Index = () => {
           ))}
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Intresserad?
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Låt oss prata igenom nuläge, målbild och första steg. Jag kan bidra
-            med både riktning och hands-on leverans – utan onödig komplexitet.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all duration-300 glow-primary"
-          >
-            Kontakta mig!
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };
